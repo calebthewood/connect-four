@@ -9,15 +9,33 @@
 /* pieces are div within game table cells: draw as colored circles */
 
 .piece {
-  /* TODO: make into circles */
-  margin: 5px;
-  width: 80%;
-  height: 80%;
+  margin: auto;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  background-color: blue;
+  /* ANIMATION done with these three properties and the keyframes selector */
+  animation-name: dropIn;
+  animation-duration: 1.3s;
+  animation-timing-function: ease;
 }
 
-/* TODO: make pieces red/blue,  depending on player 1/2 piece */
+
+@keyframes dropIn {
+  from {
+    transform: translateY(-400px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.p1 {
+  background-color: red;
+}
+
+.p2 {
+  background-color: blue;
+}
 
 /* column-top is table row of clickable areas for each column */
 
